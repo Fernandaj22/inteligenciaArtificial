@@ -521,6 +521,10 @@ p, h1, h2, span{
 	.item{
 		display: none;
 	}
+
+	.hide{
+		visibility: hidden;
+	}
 	#uno{
 		display: block;
 		transition: .2s;

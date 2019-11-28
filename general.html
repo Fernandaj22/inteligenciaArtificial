@@ -70,13 +70,14 @@
                     cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
 
-                <a class="sliders flex-vertical col-xs-1">
-                    <i class="fas fa-angle-left arrow noactive"></i>   
+                <a class="sliders flex-vertical col-xs-1" id="left" onclick="changeQuestion('left')">
+                    <i class="fas fa-angle-left arrow noactive" id="left-arrow"></i>   
+                    
                 </a>
 
                 <div class="pregunta flex col-xs-10">
                     <!-- UNO -->
-                    <div class="">
+                    <div class="question" id="1">
                         <!-- <div class="flex-vertical">
                             <h2>¿Ha presentado <b>hinchazón</b> en la piel o zona afectada?</h2>
 
@@ -90,7 +91,7 @@
                             <h2>Indique el grado de hinchazón que presenta en la zona afectada</h2>
 
                             <div class="flex-vertical col-xs-12">
-                                <input type="range" class="respuesta" min="0" max="10" value="50" id="range">
+                                <input type="range" class="respuesta" min="0" max="10" value="5" id="range">
 
                                 <div class="grado flex-between">
                                     <img src="img/zero.png">
@@ -109,7 +110,7 @@
                         </div>
                     </div>
                     <!-- DOS -->
-                    <div class="item">
+                    <div class="item"  id="2">
                         <!-- <div class="flex-vertical" id="uno">
                             <h2>¿Ha presentado <b>hinchazón</b> en la piel o zona afectada?</h2>
 
@@ -119,7 +120,7 @@
                             </div>
                         </div> -->
 
-                        <div class="flex-vertical" id="dos">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de enrojecimiento que presenta en la zona afectada</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -142,8 +143,8 @@
                         </div>
                     </div>
                     <!-- TRES -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <div class="item"  id="3">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de sensibilidad que presenta en la piel o zona afectada</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -166,8 +167,8 @@
                         </div>
                     </div>
                     <!-- CUATRO -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <div class="item"  id="4">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de comezón o picazón que presenta en la piel o zona afectada</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -189,9 +190,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- CUATRO -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- CINCO -->
+                    <div class="item"  id="5">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de descamación que ha presentado</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -213,9 +214,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- CINCO -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- SEIS -->
+                    <div class="item"  id="6">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de aparición de costrar en la piel o zona afectada</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -237,9 +238,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- SEIS -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- SIETE -->
+                    <div class="item"  id="7">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de aparición de quistes, bultos duros por encima o debajo de la piel, abscesos o erupciones</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -261,9 +262,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- SIETE -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- OCHO -->
+                    <div class="item"  id="8">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de segregación de líquidos en la zonas afectadas</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -285,9 +286,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- OCHO -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- NUEVE -->
+                    <div class="item"  id="9">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de presencia de heridas (heridas abiertas sin sanar, lesiones o puntos infectados)</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -309,9 +310,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- NUEVE-->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- DIEZ -->
+                    <div class="item"  id="10">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de aparición de manchas en la piel</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -333,9 +334,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- DIEZ -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- ONCE -->
+                    <div class="item"  id="11">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de presencia de dolor en zonas específicas o malestar en general</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -357,9 +358,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- ONCE -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- DOCE -->
+                    <div class="item"  id="12">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de aparición de ampollas en la piel o zona afectada</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -381,9 +382,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- DOCE -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- TRECE -->
+                    <div class="item"  id="13">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de aparición de puntos negros o espinillas</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -405,9 +406,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- TRECE -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- CATORCE -->
+                    <div class="item"  id="14">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de presencia de ardor en la piel o zona afectada</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -429,9 +430,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- CATORCE -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- QUINCE -->
+                    <div class="item"  id="15">
+                        <div class="flex-vertical">
                             <h2>En caso de que las protuberancias, ampollas o heridas hayan expulsado cierto tipo de líquido, indique el grado de mal olor presentado</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -453,9 +454,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- QUINCE -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- DIECISEIS -->
+                    <div class="item"  id="16">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de presencia de aumento de temperatura corporal (fiebre)</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -477,9 +478,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- DIECISEIS -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- DIECISIETE -->
+                    <div class="item"  id="17">
+                        <div class="flex-vertical">
                             <h2>En caso de que las protuberancias, ampollas o heridas hayan expulsado sangre, indique el grado de sangre presentada</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -501,9 +502,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- QUINCE -->
-                    <div class="item">
-                        <div class="flex-vertical" id="dos">
+                    <!-- DIECIOCHO -->
+                    <div class="item"  id="18">
+                        <div class="flex-vertical">
                             <h2>Indique el grado de dolores articulares (principios de artritis)</h2>
 
                             <div class="flex-vertical col-xs-12">
@@ -527,8 +528,8 @@
                     </div>
                 </div>
 
-                <a class="sliders flex-vertical col-xs-1">
-                    <i class="fas fa-angle-right arrow"></i>   
+                <a class="sliders flex-vertical col-xs-1" id="right" onclick="changeQuestion('right')">
+                    <i class="fas fa-angle-right arrow" id="right-arrow"></i>   
                 </a>
             </div>
         </div>
