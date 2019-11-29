@@ -160,34 +160,25 @@
             });
         });
 
-        var select = false, deselect = [];
-        $(function() {
-            $( "#selectable" ).selectable({
-                selecting: function (event, ui) {
-                    if (event.detail == 0) {
-                        select = true;
-                        return true;
-                    }
-                    if ($(ui.selecting).hasClass('ui-selected')) {
-                        deselect.push(ui.selecting);
-                    }
-                    console.log(select);
-                },
-                unselecting: function (event, ui) {
-                    $(ui.unselecting).addClass('ui-selected');
-                },
-                stop: function () {
-                    if (!select) {
-                        $.each(deselect, function (ix, de) {
-                            $(de)
-                                .removeClass('ui-selecting')
-                                .removeClass('ui-selected');
-                        });
-                    }
-                    select = false;
-                    deselect = [];
-                }
-            });
+        var select = [];
+
+        $(function(){
+            $('#selectable').bind( "mousedown", function ( e ){
+                e.metaKey = true;
+                    }).selectable({
+                        selected: function (event, ui){
+                            if ($(ui.selected).hasClass('click-selected'))
+                                $(ui.selected).removeClass('ui-selected');
+                            else{
+                                $(ui.selected).addClass('click-selected');
+                                    var res = select.push(ui.selected.id);
+                            }
+                        },
+                        unselected: function (event, ui)
+                        {
+                            $(ui.unselected).removeClass('ui-selected');
+                        }
+                    });
         });
     </script>
 
