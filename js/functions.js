@@ -39,7 +39,7 @@ function changeClass(htmlElement, className){
 }
 
 function changeQuestion(direction){
-	id = parseInt(document.querySelector('.question').id);
+	let id = parseInt(document.querySelector('.question').id);
 
 	if(id > 1 && direction == 'left'){
 		changeQuestionLeft();
@@ -76,3 +76,16 @@ function changeQuestionRight(){
 	changeClass(id + 1, 'question');
 	changeClass(id + 1, 'item');
 }
+
+
+// Función para obtener resultados del usuario
+function getResults(){
+
+	const respuestas  = document.querySelectorAll('input.respuesta');
+	let valores = [];
+	for(let respuesta of respuestas) valores.push(respuesta.value);
+	
+	return valores;
+}
+
+console.log(getResults());
