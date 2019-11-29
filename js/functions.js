@@ -61,13 +61,13 @@ function terminarGeneral(){
 				}
 			result = getMaxMin(EArray,usuario, e);
 		}
-		localStorage.setItem("result",JSON.stringify(result));
+		sessionStorage.setItem("result",JSON.stringify(result));
 		navegar('resultado');
 	}
 }
 function terminarEspe(){
-	if(localStorage.getItem("result") != null){
-		localStorage.removeItem("result");
+	if(sessionStorage.getItem("result") != null){
+		sessionStorage.removeItem("result");
 	}
 	usuario =  getResults();
 
@@ -75,8 +75,9 @@ function terminarEspe(){
 	request.open('GET', 'js/enfermedades.json', true);
 	request.send();
 	request.onreadystatechange = function () {
-		
+		console.log("entro");
 		if (this.readyState == 4 && this.status == 200) {
+			
 			
 			var req = JSON.parse(this.responseText);
 			var enfermedades = req['Enfermedades'];
@@ -94,20 +95,14 @@ function terminarEspe(){
 				EArray.push(sin);
 			}
 
-			// for(let i=0; i< (enfEsp.data).length;i++){
-			// 	console.log((enfEsp.data)[i]);
-				
-			// 	// sin = enfermedades[enfEsp.data[i]]['Sintomas'];
-			// 	// console.log(sin);
-				
-			// 	// e.push(enf);
-			// 	// EArray.push(sin);
-			// }
 			result = getMaxMin(EArray,usuario, e);
-			localStorage.setItem("result",JSON.stringify(result));
+			console.log(result);
+			
+			sessionStorage.setItem("result",JSON.stringify(result));
 		}
+		navegar('resultado');
 	}
-	navegar('resultado');
+	
 }
 function getMaxMin(a, b, c){
     //Sumatoria minima de los sintomas
@@ -203,8 +198,8 @@ function iniciar(){
 
 
 function cargar(){
-	if (localStorage.getItem("result")!=null){
-		res = JSON.parse(localStorage.getItem("result"));	
+	if (sessionStorage.getItem("result")!=null){
+		res = JSON.parse(sessionStorage.getItem("result"));	
 		console.log(res);
 		if (res[0]!="no hay coincidencias"){	
 			var request = new XMLHttpRequest();
