@@ -67,52 +67,52 @@
                 </div>
 
                 <div id="selectable">
-                    <div class="enfermedad flex-vertical" id="1">
+                    <div class="enfermedad flex-vertical" id="1" onclick="select(1)">
                         <img src="img/acne.jpg">    
                         <b>Acné</b>
                     </div>
 
-                	<div class="enfermedad flex-vertical" id="2">
+                	<div class="enfermedad flex-vertical" id="2" onclick="select(2)">
                         <img src="img/eczema.jpg">   
                         <b>Eczema</b>
                     </div>
 
-                    <div class="enfermedad flex-vertical" id="3">
+                    <div class="enfermedad flex-vertical" id="3" onclick="select(3)">
                         <img src="img/hidradentitis.jpg">   
                         <b>Hidradentitis</b>
                     </div>
 
-                    <div class="enfermedad flex-vertical" id="4">
+                    <div class="enfermedad flex-vertical" id="4" onclick="select(4)">
                         <img src="img/impetigo.jpg">   
                         <b>Impétigo</b>
                     </div>
 
-                    <div class="enfermedad flex-vertical" id="5">
+                    <div class="enfermedad flex-vertical" id="5" onclick="select(5)">
                         <img src="img/molusco.jpeg">   
                         <b>Molusco contagioso</b>
                     </div>
 
-                    <div class="enfermedad flex-vertical" id="6">
+                    <div class="enfermedad flex-vertical" id="6" onclick="select(6)">
                         <img src="img/psoriasis.jpg">   
                         <b>Psoriasis</b>
                     </div>
 
-                    <div class="enfermedad flex-vertical" id="7">
+                    <div class="enfermedad flex-vertical" id="7" onclick="select(7)">
                         <img src="img/queratosis.jpg">   
                         <b>Queratosis</b>
                     </div>
 
-                    <div class="enfermedad flex-vertical" id="8">
+                    <div class="enfermedad flex-vertical" id="8" onclick="select(8)">
                         <img src="img/rosacea.jpg">   
                         <b>Rosácea</b>
                     </div>
 
-                    <div class="enfermedad flex-vertical" id="9">
+                    <div class="enfermedad flex-vertical" id="9" onclick="select(9)">
                         <img src="img/sinus.jpg">   
                         <b>Sinus</b>
                     </div>
 
-                    <div class="enfermedad flex-vertical" id="10">
+                    <div class="enfermedad flex-vertical" id="10" onclick="select(10)">
                         <img src="img/urticaria.jpg">   
                         <b>Urticaria</b>
                     </div>
@@ -160,26 +160,40 @@
             });
         });
 
-        var select = [];
+        var selected = [];
 
-        $(function(){
-            $('#selectable').bind( "mousedown", function ( e ){
-                e.metaKey = true;
-                    }).selectable({
-                        selected: function (event, ui){
-                            if ($(ui.selected).hasClass('click-selected'))
-                                $(ui.selected).removeClass('ui-selected');
-                            else{
-                                $(ui.selected).addClass('click-selected');
-                                    var res = select.push(ui.selected.id);
-                            }
-                        },
-                        unselected: function (event, ui)
-                        {
-                            $(ui.unselected).removeClass('ui-selected');
-                        }
-                    });
-        });
+        function select(id){
+            item = document.getElementById(id);
+            console.log(item.id);
+
+            item.classList.toggle('ui-selected');
+
+            selected.push(item.id);
+
+            console.log(selected);
+        }
+
+        // var select = [];
+
+        // $(function(){
+        //     $('#selectable').bind( "mousedown", function ( e ){
+        //         e.metaKey = true;
+        //             }).selectable({
+        //                 selected: function (event, ui){
+        //                     if($(ui.selected).hasClass('click-selected'))
+        //                         $(ui.selected).removeClass('ui-selected');
+        //                     else{
+        //                         $(ui.selected).addClass('click-selected');
+        //                         var res = select.push(ui.selected.id);
+        //                         console.log(res);
+        //                     }
+        //                 },
+        //                 unselected: function (event, ui)
+        //                 {
+        //                     $(ui.unselected).removeClass('ui-selected');
+        //                 }
+        //             });
+        // });
     </script>
 
 </body>
