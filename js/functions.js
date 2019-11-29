@@ -170,15 +170,12 @@ function selectEnf(id){
 		if(bandera){
 			item.classList.remove('ui-selected');
 			selected = selected.filter(option => option != item.id);
-			console.log(selected);
 		}
 		else{
 			item.classList.add('ui-selected');
 			selected.push(item.id);
-			console.log(selected);
 
 		}
-		console.log(bandera);
 	} catch(error){
 		console.log(error);
 	}
