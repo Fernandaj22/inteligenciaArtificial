@@ -1,0 +1,55 @@
+{
+    "Enfermedades":{
+        "Eczema":{
+            "Origen":"",
+            "Sintomas":[0.8,1,0.7,0.8,0.9,0.6,0.4,0.4,0.5,0.4,0,0,0.6,0,0.4,0,0,0,0],
+            "tratamiento":""
+        },
+        "Acne":{
+            "Origen":"El acné es una enfermedad que se caracteriza por la aparición de lesiones en la piel como una inflamación y posterior infección del poro folicular (orificio de salida del pelo). Estas lesiones suelen ser granos, espinillas negras y parches rojos e inflamados, como quistes.",
+            "Sintomas":[0.7,0.7,0,0.2,0.1,0,0.8,0.9,0.5,0.8,0,0.3,0.7,0.9,0,0,0,0,0],
+            "tratamiento":"El tratamiento del acné se basa en dos modalidades: la tópica y la sistémica.  MEDICAMENTOS TÓPICOSRetinoides y medicamentos similares a los retinoides. Vienen en crema, gel y loción. Lo que hace es evitar que se tapen los folículos pilosos.Antibióticos. Lo que hacen es matar el exceso de bacterias en la piel y reducir el enrojecimiento.Ácido salicílico y ácido azelaico. El ácido azelaico se encuentra de manera natural en los cereales integrales y en los productos de origen animal.Dapsona. Para el acné inflamatorio.MEDICAMENTOS ORALESAntibióticos. En el caso del acné moderado a grave, es posible que necesites antibióticos orales para eliminar las bacterias y combatir la inflamación.Anticonceptivos orales combinados. La Administración de Alimentos y Medicamentos aprobó cuatro anticonceptivos orales combinados para el tratamiento del acné en mujeres que también desean usarlos como método anticonceptivo.Agentes antiandrógenos. El medicamento espironolactona puede ser una opción para las mujeres y muchachas adolescentes, en caso de que los antibióticos no estén ayudando.Isotretinoína. La isotretinoína es un potente medicamento para las personas cuyo acné grave no responde a los demás tratamientos."
+        },
+        "Psoriasis":{
+            "Origen":"",
+            "Sintomas":[0,0.9,0.9,0,0.7,0.8,0.8,0.7,0,0,0.8,0.6,0,0,0.5,0,0,0,0.7],
+            "tratamiento":""
+        },
+        "Hidradenitis":{
+            "Origen":"",
+            "Sintomas":[1,0.9,0.8,0.9,0.2,0,0,1,0.8,0.7,0,0.9,0.8,0,0.9,0.9,0,0,0],
+            "tratamiento":""
+        },
+        "Urticaria":{
+            "Origen":"",
+            "Sintomas":[0.7,0.8,0,0.5,0.9,0.1,0,0.9,0,0,0.8,0.6,0,0,0.2,0,0.8,0,0.5],
+            "tratamiento":""
+        },
+        "Impetigo":{
+            "Origen":"",
+            "Sintomas":[0.8,0.9,0.6,0,0.7,0,0.9,0,0.8,0.9,0,0.9,0.9,0,0.2,0,0,0,0],
+            "tratamiento":""
+        },
+        "Molusco Contagioso":{
+            "Origen":"",
+            "Sintomas":[0.5,0.6,0,0.5,0.8,0,0,1,0,0,0,0,0,0,0,0,0,0,0],
+            "tratamiento":""
+        },
+        "Rosacea":{
+            "Origen":"",
+            "Sintomas":[0.7,0.9,0,0.9,0.7,0,0,0.7,0.7,0,0.8,0,0,0,0.8,0,0.4,0,0],
+            "tratamiento":""
+        },
+        "Sinus pilodinal":{
+            "Origen":"algo",
+            "Sintomas":[0.8,0.8,0,0.9,0.7,0,0,1,0,0,0,1,0,0.2,0.5,0.9,0.5,0.7,0],
+            "tratamiento":"algox2"
+        },
+        "Queratosis":{
+            "Origen":"",
+            "Sintomas":[0.7,0.6,0.9,0.2,0.9,0.8,0.8,0.8,0,0.7,0.7,0.5,0,0,0.8,0,0,0,0],
+            "tratamiento":""
+        }
+
+    }
+}
