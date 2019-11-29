@@ -384,6 +384,20 @@ p, h1, h2, span{
 					        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 				}
 
+	.texto{
+		float: left;
+		position: relative;
+	}
+
+		.texto h2{
+			font-size: 1.8em;
+			text-align: center;
+		}
+
+		.texto p{
+			text-align: center;
+			font-size: 1.1em;
+		}
 /*NOSOTRAS*/
 	.cuarto{
 		height: 300px;
@@ -460,7 +474,9 @@ p, h1, h2, span{
 	height: calc(100% - 130px);
 }
 	.pregunta h2{
-		font-size: 2em;
+		width: 100%;
+		height: auto;
+		font-size: 1.8em;
 		text-align: center;
 		margin: 20px 0;
 	}
@@ -508,14 +524,13 @@ p, h1, h2, span{
 		}
 
 	.grado{
-		width: 100%;
+		width: 80%;
 		float: left;
 		position: relative;
-		margin-top: 50px;
+		margin-top: 30px;
 	}
 		.grado img{
-			height: 30px;
-			/*margin: 0 20px;*/
+			height: 25px;
 		}
 
 	.item{
@@ -525,55 +540,74 @@ p, h1, h2, span{
 	.hide{
 		visibility: hidden;
 	}
-	#uno{
-		display: block;
-		transition: .2s;
-	}
-
-	#dos{
-		display: none;
-		transition: .2s;
-	}
 
 /*ENFERMEDAD*/
-.enfermedad{
-	height: auto;
+#selectable{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+	.enfermedad{
+		width: 18%;
+  		margin: 10px 13px;
+		height: auto;
+		float: left;
+		position: relative;
+		border-radius: 10px;
+		cursor: pointer;
+		padding: 10px;
+		box-sizing: border-box;
+		background: var(--fondo);
+	}
+		.enfermedad:hover{
+			background: var(--azul-baby);
+		}
+
+		.enfermedad img{
+			height: 100px;
+		}
+
+		.enfermedad b{
+			font-size: 1.2em;
+			margin-top: 10px;
+		}
+
+		#selectable .ui-selected{
+			background: var(--azul-baby);
+		}
+
+		.diag-btn button{
+			width: auto;
+			border: none;
+			background: var(--azul);
+			color: var(--blanco);
+			height: 35px;
+			border-radius: 5px;
+			font-size: 1.2em;
+			outline: none;
+			padding: 0 10px;
+		}
+
+/*RESULTADO*/
+.resultado{
 	float: left;
 	position: relative;
-	margin: 20px 20px;
-	border-radius: 10px;
-	cursor: pointer;
 	padding: 10px;
 	box-sizing: border-box;
-	background: var(--fondo);
 }
-	.enfermedad:hover{
-		background: var(--azul-baby);
+	.resultado img{
+		height: 200px;
+		margin: 10px 0;
+		opacity: .5;
 	}
 
-	.enfermedad img{
-		height: 100px;
-	}
+		.resultado img:hover{
+			opacity: 1;
+		}
 
-	.enfermedad b{
+	.resultado p, .resultado b{
 		font-size: 1.2em;
-		margin-top: 10px;
-	}
-
-	#selectable .ui-selected{
-		background: var(--azul-baby);
-	}
-
-	.diag-btn button{
-		width: auto;
-		border: none;
-		background: var(--azul);
-		color: var(--blanco);
-		height: 35px;
-		border-radius: 5px;
-		font-size: 1.2em;
-		outline: none;
-		padding: 0 10px;
+		margin: 0px !important;
 	}
 
 @keyframes animate {
