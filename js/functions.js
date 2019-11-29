@@ -181,8 +181,7 @@ function selectEnf(id){
 }
 
 function iniciar(){
-	data =[]	
-	if($('.ui-selected')!=null){
+	data =[]
 		$('.ui-selected').each(function() {
 			// console.log($("#"+this.id+"_d").html());
 			data.push($("#"+this.id+"_d").html())
@@ -190,41 +189,50 @@ function iniciar(){
 		obj = {"data":data}
 		localStorage.setItem("enf",JSON.stringify(obj));
 		try{
-			navegar('especifico-preg');
+			if (data.length==0){
+				alert("Debes elegir al menos una enfermedad")
+			}else{
+				navegar('especifico-preg');
+			}
+			
 		} catch (error){
 			console.log(error);
 		}
-	}else{
-		alert("Debes elegir al menos una enfermedad")
-	}
 	
 }
 
 
 function cargar(){
 	if (localStorage.getItem("result")!=null){
-		res = JSON.parse(localStorage.getItem("result"));		
-		var request = new XMLHttpRequest();
-		request.open('GET', 'js/enfermedades.json', true);
-		request.send();
-		request.onreadystatechange = function () {
-			if (this.readyState == 4 && this.status == 200) {
-				var req = JSON.parse(this.responseText);				
-				var enfermedades = req['Enfermedades'];
-				var enfermedad = enfermedades[res[0][0][0]];
-				console.log(enfermedades[res[0][0]]);
-				origin = enfermedad['Origen'];
-				trat = enfermedad['tratamiento'];
-				$("#nombre").html(res[0][0][0]);
-				$("#image").attr("src","img/"+res[0][0][0]+".jpg");
-				$("#origen").html(origin);
-				$("#tratamiento").html(trat);
+		res = JSON.parse(localStorage.getItem("result"));	
+		console.log(res);
+		if (res[0]!="no hay coincidencias"){	
+			var request = new XMLHttpRequest();
+			request.open('GET', 'js/enfermedades.json', true);
+			request.send();
+			request.onreadystatechange = function () {
+				if (this.readyState == 4 && this.status == 200) {
+					var req = JSON.parse(this.responseText);				
+					var enfermedades = req['Enfermedades'];
+					var enfermedad = enfermedades[res[0][0][0]];
+					console.log(enfermedades[res[0][0]]);
+					origin = enfermedad['Origen'];
+					trat = enfermedad['tratamiento'];
+					$("#nombre").html(res[0][0][0]);
+					$("#image").attr("src","img/"+res[0][0][0]+".jpg");
+					$("#origen").html(origin);
+					$("#tratamiento").html(trat);
+				}
 			}
+		}else{
+			$("#nombre").html("No hay enfermedades que coincidan");
+			$("#image").attr("src","img/notFound.jpg");
 		}
 	}else{
-		navegar('index')
+			navegar('index')
 	}
 }
+
 
 // ---------------------------
 function obtenerpreg(){
