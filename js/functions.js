@@ -220,7 +220,9 @@ function cargar(){
 					trat = enfermedad['tratamiento'];
 					$("#nombre").html(res[0][0][0]);
 					$("#image").attr("src","img/"+res[0][0][0]+".jpg");
+					$("#title-origen").html('Origen:');
 					$("#origen").html(origin);
+					$("#title-tratamiento").html('Tratamiento:');
 					$("#tratamiento").html(trat);
 				}
 			}
@@ -229,7 +231,7 @@ function cargar(){
 			$("#image").attr("src","img/notFound.jpg");
 		}
 	}else{
-			navegar('index')
+		navegar('index')
 	}
 }
 
@@ -251,9 +253,15 @@ function changeClass(htmlElement, className){
 function changeQuestion(direction){
 	let id = parseInt(document.querySelector('.question').id);
 
-	if(id > 1 && direction == 'left'){
-		changeQuestionLeft();
-		document.getElementById('right-arrow').classList.remove('noactive');
+	if(direction == 'left'){
+	
+		if(id > 1 && direction == 'left'){
+			changeQuestionLeft();
+			document.getElementById('right-arrow').classList.remove('noactive');
+		}
+		if(id - 1 === 1){
+			document.getElementById('left-arrow').classList.add('noactive');
+		}
 	}
 	if(direction == 'right'){
 		if(id < totalSymptoms){

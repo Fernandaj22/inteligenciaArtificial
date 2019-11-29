@@ -205,7 +205,7 @@ p, h1, h2, span{
     transition: all 0.3s;
     position: absolute;
     top: 0;
-    right: 0;
+	right: 0;
 }
 	/*INDEX*/
 	.main{
@@ -350,6 +350,10 @@ p, h1, h2, span{
 				outline: none;
 			}
 
+			.nueve .btn-inicio{
+				margin-top: 1em;
+			}
+
 			.nueve a{
 				text-decoration: none;
 				color: var(--blanco);
@@ -391,12 +395,17 @@ p, h1, h2, span{
 
 		.texto h2{
 			font-size: 1.8em;
+			font-weight: 700;
+			margin-top: 2em;
 			text-align: center;
 		}
 
 		.texto p{
+			width: 55%;
+			margin-top: 1em;
 			text-align: center;
-			font-size: 1.1em;
+			color: rgba(0,0,0,.6);
+			font-size: 1.2em;
 		}
 /*NOSOTRAS*/
 	.cuarto{
@@ -418,10 +427,16 @@ p, h1, h2, span{
 		}
 
 		.cuarto p{
+			margin-top: 1em;
 			font-size: 1.2em;
 			color: rgba(0,0,0,.7);
 			text-align: center;
 		}
+
+		.cuarto .expediente{
+			color: #557BFF;
+		}
+
 
 /*DIAGNOSTICO*/
 	.diagnostico{
@@ -457,21 +472,32 @@ p, h1, h2, span{
 
 /*PREGUNTAS*/
 .sliders{
-	height: calc(100% - 130px);
+	height: calc(100% - 250px);
+	background-color: #D7DFF7;
 	float: left;
 	position: relative;
+	cursor: pointer;
+	color: #337AB7;
+	transition: .3s all;
 }
 	.sliders .arrow{
-		cursor: pointer;
 		font-size: 2em;
 	}
 
 	.noactive{
-		color: rgba(0,0,0,.3);
+		/* color: rgba(0,0,0,.3); */
+		color: #969CAC !important;
 	}
 
+	/* .sliders:hover{
+		background-color: #1E496C;
+		color: #fff;
+		transition: .3s all;
+	} */
+	
+
 .pregunta{
-	height: calc(100% - 130px);
+	height: calc(100% - 280px);
 }
 	.pregunta h2{
 		width: 100%;
@@ -506,6 +532,7 @@ p, h1, h2, span{
 		-webkit-transition: .2s;
 		transition: opacity .2s;
 		background: var(--fondo);
+		background-color: rgba(0,0,0,.1);
 	}
 
 		.respuesta:hover {
@@ -524,7 +551,7 @@ p, h1, h2, span{
 		}
 
 	.grado{
-		width: 80%;
+		width: 100%;
 		float: left;
 		position: relative;
 		margin-top: 30px;
@@ -576,7 +603,12 @@ p, h1, h2, span{
 			background: var(--azul-baby);
 		}
 
+		.btn-final{
+			margin-top: 4em;
+		}
+
 		.diag-btn button{
+			margin-top: 5px;
 			width: auto;
 			border: none;
 			background: var(--azul);
@@ -598,7 +630,9 @@ p, h1, h2, span{
 	.resultado img{
 		height: 200px;
 		margin: 10px 0;
-		opacity: .5;
+		opacity: .7;
+		box-shadow: -2px 5px 5px 5px rgba(0,0,0,.2);
+		margin-bottom: 2em;
 	}
 
 		.resultado img:hover{
@@ -608,6 +642,30 @@ p, h1, h2, span{
 	.resultado p, .resultado b{
 		font-size: 1.2em;
 		margin: 0px !important;
+	}
+
+	.resultado .diag-btn{
+		margin-top: 1em;
+	}
+
+	.resultado .dato{
+		width: 50%;
+		text-align: justify;
+		margin-bottom: 1em;
+	}
+
+	.dato h4{
+		font-weight: 600;
+	}
+
+	.dato p{
+		font-size: 1.1em;
+		color: rgba(0,0,0,.6);
+	}
+
+	.resultado .diag-btn{
+		margin-bottom: 3em;
+		margin-top: 1em;
 	}
 
 @keyframes animate {
