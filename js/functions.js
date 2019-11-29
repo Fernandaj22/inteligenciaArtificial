@@ -158,16 +158,27 @@ function getMaxMin(a, b, c){
 	}
     return(mayorArr);
 }
+
+var selected = [];
 function selectEnf(id){	
-	var selected = [];
+	let bandera = false;
 	try{
 		item = document.getElementById(id);
-		if(item.className == ('ui-selected')){
+		for(let clase of item.classList){
+			if(clase === 'ui-selected') bandera = true;
+		}
+		if(bandera){
 			item.classList.remove('ui-selected');
-		}else{
+			selected = selected.filter(option => option != item.id);
+			console.log(selected);
+		}
+		else{
 			item.classList.add('ui-selected');
 			selected.push(item.id);
+			console.log(selected);
+
 		}
+		console.log(bandera);
 	} catch(error){
 		console.log(error);
 	}
